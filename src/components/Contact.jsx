@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Mail, Copy, Check, ArrowUpRight } from 'lucide-react';
+import { Mail, Copy, Check, ArrowUpRight, Sparkles, MapPin } from 'lucide-react';
 
 const GithubIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -14,6 +14,8 @@ const LinkedinIcon = ({ className = "w-4 h-4" }) => (
   </svg>
 );
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function Contact() {
   const [copied, setCopied] = useState(false);
 
@@ -24,41 +26,53 @@ export default function Contact() {
   };
 
   return (
-    <footer id="contact" className="py-20 bg-[#09090b]">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <footer id="contact" className="py-16 sm:py-24 bg-[#09090b] relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contact Container */}
-        <div className="p-8 sm:p-10 rounded-2xl bg-[#0e0e11] border border-[#222227] mb-16">
-          <div className="max-w-2xl space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+        <div className="glass-card p-6 sm:p-10 md:p-12 rounded-3xl relative overflow-hidden card-fluid mb-12 sm:mb-16 reveal-on-scroll">
+          
+          {/* Ambient corner light */}
+          <div className="absolute -top-16 -right-16 w-48 h-48 sm:w-64 sm:h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-2xl space-y-4 sm:space-y-5 relative z-10">
+            
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-zinc-300">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Let's Build Something Great</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
               Get in Touch
             </h2>
-            <p className="text-sm text-zinc-400 leading-relaxed">
+
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
               I am open to software engineering internships, edge AI research collaborations, and technical discussions. Feel free to connect directly via email or social profiles.
             </p>
 
-            {/* Email Actions */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            {/* Email Actions (Mobile-Optimized Touch Targets) */}
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="px-4 py-2 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-xs transition-colors flex items-center gap-2"
+                className="w-full xs:w-auto px-5 py-3 rounded-xl bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-xs sm:text-sm transition-all flex items-center justify-center gap-2 interactive-tap shadow-md"
               >
-                <Mail className="w-3.5 h-3.5 text-zinc-700" />
+                <Mail className="w-4 h-4 text-zinc-800" />
                 <span>Send Email</span>
               </a>
 
               <button
                 onClick={handleCopyEmail}
-                className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 text-xs font-mono transition-colors flex items-center gap-2"
+                className="w-full xs:w-auto px-4 py-3 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/10 text-xs font-mono transition-all flex items-center justify-center gap-2 interactive-tap"
+                aria-label="Copy email address"
               >
                 {copied ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-zinc-200" />
-                    <span>Copied</span>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400 font-medium">Copied to Clipboard!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5" />
+                    <Copy className="w-4 h-4 text-zinc-400" />
                     <span>{personalInfo.email}</span>
                   </>
                 )}
@@ -66,42 +80,45 @@ export default function Contact() {
             </div>
 
             {/* Profiles */}
-            <div className="flex items-center gap-3 pt-4 border-t border-[#1a1a20]">
-              <span className="text-xs text-zinc-500 font-mono">PROFILES:</span>
+            <div className="flex flex-wrap items-center gap-2.5 pt-4 sm:pt-6 border-t border-white/[0.06]">
+              <span className="text-xs text-zinc-500 font-mono w-full xs:w-auto mb-1 xs:mb-0">
+                PROFILES:
+              </span>
               
               <a
                 href={personalInfo.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-900 border border-zinc-800 text-xs text-zinc-300 hover:text-white transition-colors"
+                className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-zinc-900/90 border border-white/10 text-xs text-zinc-300 hover:text-white transition-all interactive-tap"
               >
-                <GithubIcon className="w-3.5 h-3.5" />
+                <GithubIcon className="w-4 h-4" />
                 <span>GitHub</span>
-                <ArrowUpRight className="w-3 h-3 text-zinc-500" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
               </a>
 
               <a
                 href={personalInfo.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-900 border border-zinc-800 text-xs text-zinc-300 hover:text-white transition-colors"
+                className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-zinc-900/90 border border-white/10 text-xs text-zinc-300 hover:text-white transition-all interactive-tap"
               >
-                <LinkedinIcon className="w-3.5 h-3.5" />
+                <LinkedinIcon className="w-4 h-4" />
                 <span>LinkedIn</span>
-                <ArrowUpRight className="w-3 h-3 text-zinc-500" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
               </a>
             </div>
 
           </div>
         </div>
 
-        {/* Clean Footer Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-500 font-mono">
+        {/* Clean Footer Bar with Safe Area Spacing */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-500 font-mono pb-8 sm:pb-4">
           <div>
-            © {new Date().getFullYear()} Arnav Nisal. All rights reserved.
+            © {CURRENT_YEAR} Arnav Nisal. All rights reserved.
           </div>
-          <div>
-            DES Pune University • Pune, India
+          <div className="flex items-center gap-1.5 text-zinc-400">
+            <MapPin className="w-3 h-3 text-zinc-500" />
+            <span>DES Pune University • Pune, India</span>
           </div>
         </div>
 
