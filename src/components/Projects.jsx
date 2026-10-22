@@ -106,10 +106,10 @@ export default function Projects() {
                     <div className="mb-5 p-3.5 sm:p-4 rounded-xl bg-amber-500/[0.04] border border-amber-500/20 text-xs text-zinc-300 space-y-1.5">
                       <div className="font-semibold text-amber-200 flex items-center gap-1.5 font-mono text-[11px]">
                         <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                        <span>ISLH 2026 Berend Houwen Travel Award</span>
+                        <span>ISLH 2026 Research & Travel Award Recognition</span>
                       </div>
                       <p className="text-zinc-300/90 leading-relaxed text-xs">
-                        Co-authored research paper evaluates real-time reticulocyte enumeration using quantized YOLOv11-seg inference directly on smartphone chipsets under mobile optical microscopy.
+                        Co-authored research paper on real-time reticulocyte enumeration using quantized YOLOv11-seg inference directly on smartphone chipsets under mobile optical microscopy. The prestigious <strong>Berend Houwen Travel Award at ISLH 2026</strong> was awarded to the project's presenting author (my father).
                       </p>
                     </div>
                   )}

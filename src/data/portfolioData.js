@@ -13,7 +13,7 @@ export const personalInfo = {
   },
   stats: [
     { label: "Target Architecture", value: "Edge AI & Mobile" },
-    { label: "Conference Award", value: "ISLH 2026 Winner" },
+    { label: "Conference Paper", value: "ISLH 2026 Co-Author" },
     { label: "Hackathon Win", value: "HackForge 2026 Winner" },
     { label: "Work Experience", value: "Manman Mfg (Frontend)" },
   ]
@@ -62,13 +62,13 @@ export const projectsData = [
     title: "RetiQ",
     tagline: "Smartphone-based reticulocyte enumeration via quantized computer vision",
     category: "Edge AI & Healthcare",
-    award: "Berend Houwen Travel Award at ISLH 2026",
-    awardNote: "Co-authored research paper received the prestigious Berend Houwen Travel Award at ISLH 2026",
+    award: "ISLH 2026 Travel Award (Presenting Author)",
+    awardNote: "Co-authored research paper; Berend Houwen Travel Award awarded to presenting author at ISLH 2026",
     description: "An automated health-tech mobile application using Flutter and quantized neural networks (YOLOv11-seg / TFLite) for smartphone-based reticulocyte enumeration.",
     highlights: [
       "Quantized YOLOv11-seg architecture to TFLite for real-time sub-second segmentation on resource-constrained mobile chipsets.",
       "Built native camera pipeline in Flutter ensuring sub-micron cellular resolution capture under portable optical microscopes.",
-      "Co-authored peer-reviewed research paper honored with the Berend Houwen Travel Award at ISLH 2026."
+      "Co-authored peer-reviewed research paper; Berend Houwen Travel Award was awarded to the project's presenting author (father) at ISLH 2026."
     ],
     techStack: ["Flutter", "YOLOv11-seg", "TensorFlow Lite", "Python", "Computer Vision"],
     githubUrl: null,

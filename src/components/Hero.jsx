@@ -110,10 +110,10 @@ export default function Hero() {
           <div className="glass-card p-3.5 sm:p-4 rounded-xl card-fluid border-amber-500/20">
             <div className="flex items-center gap-1.5 text-[11px] text-amber-400/90 font-mono">
               <Award className="w-3 h-3 text-amber-400" />
-              <span>HONORS & AWARDS</span>
+              <span>HONORS & RECOGNITION</span>
             </div>
             <div className="text-xs sm:text-sm font-semibold text-zinc-200 mt-1.5">
-              ISLH 2026 & HackForge Win
+              HackForge Winner • ISLH Co-Author
             </div>
           </div>
 

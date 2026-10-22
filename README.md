@@ -19,7 +19,7 @@ A sleek, responsive, dark-mode-first developer portfolio engineered for **Arnav 
   - Core Focus: Building intelligent systems ranging from local AI model deployment and quantized neural networks to embedded IoT hardware.
   - Professional Experience: Software Engineering Internship at **Manman Manufacturing**.
 - **Featured Projects**:
-  - **RetiQ**: Automated health-tech app using Flutter and quantized YOLOv11-seg / TFLite for smartphone-based reticulocyte enumeration. Highlighted with the **Berend Houwen Travel Award at ISLH 2026**.
+  - **RetiQ**: Automated health-tech app using Flutter and quantized YOLOv11-seg / TFLite for smartphone-based reticulocyte enumeration. Co-authored research paper whose presenting author (father) received the **Berend Houwen Travel Award at ISLH 2026**.
   - **Hyper-IDE**: Open-source, hybrid AI code editor built with Electron, Monaco, React, and local GGUF LLM inference with automated cloud fallback.
   - **The Trust Juggler (HackForge 2026)**: Real-time identity engine for delivery account sharing detection using React Native, WebAssembly, and voice biometrics.
   - **AgentX Disaster Coordinator (Kurukshetra 2.0)**: Agentic disaster relief monorepo featuring a FastAPI backend, Firebase, and a Google Gemini multi-agent triage pipeline.
